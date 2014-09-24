@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Query Recipes</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./templejt.xhtml">
+             <ui:define name="content">
+              
+                <h:form id="frmQueryRecipes">
+                    
+                   
+          
+                    <p:growl id="msgsGrowl" />
+                   
+                 
+                   
+                        <h:outputText value="Minimum rating" />        &nbsp;
+                        <h:inputText value="#{mBRecepti.minRatingValue}"/>
+<br/>
+                        <h:outputText value="Maximum rating" />  &nbsp;
+                        <h:inputText value="#{mBRecepti.maxRatingValue}"/>
+                  <br/>      
+                        Total cooking time:
+                        <p:selectOneRadio value="#{mBRecepti.maxCookTime}">
+                        <f:selectItem itemLabel="less than 30 minutes" itemValue="less30" />
+                        <f:selectItem itemLabel="less than an hour" itemValue="less60" /> 
+                        <f:selectItem itemLabel="less than two hour" itemValue="less120" /> 
+                        </p:selectOneRadio> 
+                     
+                        <h:outputText value="Containing ingrediants: " />&nbsp;
+                        <h:inputText value="#{mBRecepti.ingridients}"/>
+<br/>
+                        <h:outputText value="Minimum calories" />  &nbsp;
+                        <h:inputText value="#{mBRecepti.minCalories}"/>
+                 <br/>       
+                        <h:outputText value="Maximum calories" /> &nbsp;
+                        <h:inputText value="#{mBRecepti.maxCalories}"/>
+<br/>
+                        <h:outputText value="Minimum carbohydrate content" />  &nbsp;
+                        <h:inputText value="#{mBRecepti.mincarbohydrateContent}"/>
+                  <br/>      
+                        <h:outputText value="Maximum carbohydrate content" />&nbsp;
+                        <h:inputText value="#{mBRecepti.maxcarbohydrateContent}"/>
+                  <br/>     
+                        <h:outputText value="Minimum fat content" />    &nbsp;
+                        <h:inputText value="#{mBRecepti.minFatContent}"/>
+                   <br/>     
+                        <h:outputText value="Maximum fat content" />&nbsp;
+                        <h:inputText value="#{mBRecepti.maxFatContent}"/>
+                  <br/>      
+                        <h:outputText value="Minimum protein content" />&nbsp;
+                        <h:inputText value="#{mBRecepti.minProteinContent}"/>
+                  <br/>                            
+                        <h:outputText value="Maximum protein content" />&nbsp;
+                        <h:inputText value="#{mBRecepti.maxProteinContent}"/>
+                  <br/>                              
+                        <h:outputText value="Minimum fiber content" />&nbsp;
+                        <h:inputText value="#{mBRecepti.minFiberContent}"/>
+                  <br/>                              
+                        <h:outputText value="Maximum fiber content" />  &nbsp;
+                        <h:inputText value="#{mBRecepti.maxFiberContent}"/>
+                  <br/>      
+                        <h:outputText value="Number of recipes to show" />  &nbsp;
+                        <h:inputText value="#{mBRecepti.limit}"/> 
+                        <br/>
+                        
+                        <p:commandButton value="Return all recipes" ajax="false" style="margin-left: 60px;"
+                action="#{mBRecepti.getRecipesAdvancedSearch()}"/>
+                            
+                       
+                                    </h:form>   
+             </ui:define>
+            
+            
+        </ui:composition>
+        
+    </h:body>
+</html>
+
