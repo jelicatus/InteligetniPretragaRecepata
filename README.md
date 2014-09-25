@@ -18,8 +18,10 @@ Forma preko koje korisnik unosi parametre za upite je rađena u biblioteci [Java
 
 <h1> Scenario of Use </h1>
 Izrađena aplikacija se koristi na sledeći način: pri njemom pokretanju korisniku se prikazuje forma preko koje on unosi kriterijume pretrage, što je prikazano na sledećoj slici:
+ <img src="https://github.com/jelicatus/InteligetniPretragaRecepata/blob/master/formaPretraga.png" />
 
 Klikom na dugme "Return all recipes" korsniku se prikazuje tabela koja sadrži sve informacije o receptima, koji zadovoljavaju kriterijume pretrage, kako se i vidi na slici:
+ <img src="https://github.com/jelicatus/InteligetniPretragaRecepata/blob/master/nadjeniRecepti.png" />
 
 
 
