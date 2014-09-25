@@ -19,7 +19,7 @@
                             <img src="#{r.slika}" height="100px" width="100px"/>
                         </p:column>
                         <p:column headerText="Recipe name">
-                            #{r.naziv}
+                            <a href="#{r.urlRecepta}"> #{r.naziv} </a>   
                         </p:column>
                         <p:column headerText="Total time" >
                             #{r.vratiPrikazVremena()}

@@ -14,6 +14,9 @@ public class Thing {
         
         @RdfProperty(Constants.SCHEMA+ "image")
         private URI slika;
+        
+        @RdfProperty(Constants.SCHEMA+ "url")
+        private String urlRecepta;
 	
 	public URI getUri() {
 		return uri;
@@ -29,8 +32,18 @@ public class Thing {
     public void setSlika(URI slika) {
         this.slika = slika;
     }
+
+    public String getUrlRecepta() {
+        return urlRecepta;
+    }
+
+    public void setUrlRecepta(String urlRecepta) {
+        this.urlRecepta = urlRecepta;
+    }
+
+ 
         
-        
+       
         
         
 }

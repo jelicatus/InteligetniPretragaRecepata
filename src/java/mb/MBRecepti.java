@@ -185,7 +185,7 @@ public class MBRecepti implements Serializable{
 
     
     public String getRecipesAdvancedSearch() throws IOException, MalformedURLException, ParseException, URISyntaxException{
-       
+       try{
         DataModelManager m=DataModelManager.getInstance();
         
      
@@ -196,8 +196,14 @@ public class MBRecepti implements Serializable{
         refreshujPolja();
         return "/prikazRecepata.xhtml?faces-redirect=true";
         } catch (Exception e) {
+            e.printStackTrace();
             refreshujPolja();
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "You didn't enter query parametars correctly. Try again.", ""));
+            
+        } 
+       }catch (Exception e) {
+            
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "The data was not retrieved from the local repository", ""));
             
         } 
         return "";
